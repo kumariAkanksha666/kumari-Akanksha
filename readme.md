@@ -73,3 +73,5 @@ Identify when and where Uber faces *supply shortages* (high cancellations / “N
 - *Python (Google Colab)* – Visual EDA using Pandas, Seaborn  
 - *PowerPoint* – Final insights report  
 - *Loom / OBS* – Video recording
+
+- 📌 **[Click here to view the Google Colab Notebook](https://colab.research.google.com/drive/1Iqmey8hDbK4MCHsJ5F03ci0diy6V4wqo)**
