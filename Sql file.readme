@@ -1,0 +1,55 @@
+-- 1. Total number of ride requests
+SELECT COUNT(*) AS Total_Requests
+FROM Uber_Requests;
+
+-- 2. Total requests by Status (Completed, Cancelled, No Cars Available)
+SELECT Status, COUNT(*) AS Request_Count
+FROM Uber_Requests
+GROUP BY Status;
+
+-- 3. Total requests per hour of the day
+SELECT Request_Hour, COUNT(*) AS Requests_Per_Hour
+FROM Uber_Requests
+GROUP BY Request_Hour
+ORDER BY Request_Hour;
+
+-- 4. Total requests by Pickup Point (City vs Airport)
+SELECT Pickup_point, COUNT(*) AS Requests_By_Location
+FROM Uber_Requests
+GROUP BY Pickup_point;
+
+-- 5. Count of Cancelled and No Cars Available (i.e., unfulfilled requests)
+SELECT Status, COUNT(*) AS Unfulfilled_Requests
+FROM Uber_Requests
+WHERE Status IN ('Cancelled', 'No Cars Available')
+GROUP BY Status;
+
+-- 6. Hourly demand at each Pickup Point
+SELECT Pickup_point, Request_Hour, COUNT(*) AS Requests
+FROM Uber_Requests
+GROUP BY Pickup_point, Request_Hour
+ORDER BY Pickup_point, Request_Hour;
+
+-- 7. Requests where no driver was assigned (Driver ID is NULL or blank)
+SELECT COUNT(*) AS Requests_Without_Driver
+FROM Uber_Requests
+WHERE Driver_id IS NULL OR Driver_id = '';
+
+-- 8. Count of requests that have no Drop timestamp (i.e., not completed)
+SELECT COUNT(*) AS No_Drop_Timestamp
+FROM Uber_Requests
+WHERE Drop_timestamp IS NULL OR Drop_timestamp = '';
+
+-- 9. Busiest Request Hour (Highest Demand)
+SELECT Request_Hour, COUNT(*) AS Total_Requests
+FROM Uber_Requests
+GROUP BY Request_Hour
+ORDER BY Total_Requests DESC
+LIMIT 1;
+
+-- 10. Most common Pickup Point with No Cars Available
+SELECT Pickup_point, COUNT(*) AS No_Cars_Issues
+FROM Uber_Requests
+WHERE Status = 'No Cars Available'
+GROUP BY Pickup_point
+ORDER BY No_Cars_Issues DESC;
