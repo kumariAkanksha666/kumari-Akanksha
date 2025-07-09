@@ -1,0 +1,20 @@
+# 🚕 Uber Supply-Demand Gap Analysis (Colab)
+
+This notebook analyzes Uber ride request data to identify demand-supply gaps — such as peak hours, high cancellations, and pickup-point trends.
+
+📌 *View Full EDA in Google Colab*:  
+👉 [Open Notebook](https://colab.research.google.com/drive/1Iqmey8hDbK4MCHsJ5F03ci0diy6V4wqo)
+
+## 🧰 Tools Used
+- Python (Pandas, Seaborn, Matplotlib)
+- Google Colab
+
+## 📊 Key Charts Included
+- Requests by Hour  
+- Pickup Point Distribution  
+- Status Distribution  
+- Cancelled/No Cars Over Time  
+- Trip Status by Pickup Point (Grouped)
+
+## 💡 Business Insight
+Uber should deploy more drivers during peak demand hours and focus on high-cancellation pickup points to reduce trip failures and improve customer experience.
