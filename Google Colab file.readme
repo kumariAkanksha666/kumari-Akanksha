@@ -3,6 +3,7 @@
 This notebook analyzes Uber ride request data to identify demand-supply gaps — such as peak hours, high cancellations, and pickup-point trends.
 
 📌 *View Full EDA in Google Colab*:  
+
 👉 [Open Notebook](https://colab.research.google.com/drive/1Iqmey8hDbK4MCHsJ5F03ci0diy6V4wqo)
 
 ## 🧰 Tools Used
